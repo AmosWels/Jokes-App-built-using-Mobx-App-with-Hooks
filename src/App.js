@@ -21,7 +21,11 @@ const StoreProvider = ({ children }) => {
 
 const BugsHeader = () => {
   const store = React.useContext(StoreContext);
-  return useObserver(() => <h1>{store.bugsCount} Bugs!</h1>);
+  // return useObserver(() => <h1>{store.bugsCount} Bugs!</h1>);
+  return useObserver(()=>
+    <h1>{store.bugsCount} Bugs!</h1>
+  )
+  
 };
 
 const BugsList = () => {
